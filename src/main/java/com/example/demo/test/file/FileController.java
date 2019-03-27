@@ -33,7 +33,6 @@ public class FileController {
         File localFile = new File(path, file.getOriginalFilename());
 
         file.transferTo(localFile);
-
         return new FileInfo(localFile.getAbsolutePath());
     }
 
