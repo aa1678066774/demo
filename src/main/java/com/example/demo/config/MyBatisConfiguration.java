@@ -14,7 +14,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-@Configuration
+
 public class MyBatisConfiguration {
 	@Bean
     @ConditionalOnMissingBean // 当容器里没有指定的 Bean 的情况下创建该对象
