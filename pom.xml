@@ -23,6 +23,11 @@
 
 	<dependencies>
 		<dependency>
+	      <groupId>com.github.pagehelper</groupId>
+	      <artifactId>pagehelper-spring-boot-starter</artifactId>
+	      <version>1.2.3</version>
+	    </dependency>
+		<dependency>
 		    <groupId>org.elasticsearch.plugin</groupId>
 		    <artifactId>transport-netty3-client</artifactId>
 		    <version>5.6.10</version>
@@ -161,6 +166,18 @@
                 <!-- 没有该配置，devtools 不生效 -->
 	                <fork>true</fork>
 	            </configuration>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <version>3.1</version>
+			    <configuration>
+			        <source>1.8</source>
+			        <target>1.8</target>
+			        <compilerArguments>
+			            <bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
+			        </compilerArguments>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
